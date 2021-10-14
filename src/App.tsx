@@ -6,7 +6,7 @@ import {Header} from "./shared/Header/Header";
 
 function App() {
     return (
-        <div>
+        <div className={'container'}>
             <Header/>
             <Switch>
                 <Route path={'/'} component={Home}/>
