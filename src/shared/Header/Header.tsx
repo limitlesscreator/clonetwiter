@@ -1,25 +1,28 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import s from './Header.module.sass'
 import {GlobalSvgSelector} from "../../assets/icons/global/GlobalSvgSelector";
 import Select from 'react-select'
+import {useTheme} from "../../hooks/useTheme";
+import {changeCssRootVariables} from "../../model/ChangeCssRootVariables";
+import {Theme} from "../../context/ThemeContext";
 
 interface Props {
 }
 
 export const Header = (props: Props) => {
+    const theme = useTheme()
     const options = [
         {value: 'city-1', label: 'Санк-Петербург'},
         {value: 'city-2', label: 'Москва'},
         {value: 'city-3 ', label: 'Новгород '},
     ]
 
-    const [theme, setTheme] = useState('light')
 
 
     const colourStyles = {
         control: (styles: any) => ({
             ...styles,
-            backgroundColor: theme === 'dark' ? '#4f4f4f' : 'rgba(71,147,255,0.2)',
+            backgroundColor: theme.theme === 'dark' ? '#4f4f4f' : 'rgba(71,147,255,0.2)',
             width: '194px',
             height: '37px',
             border: 'none',
@@ -28,37 +31,15 @@ export const Header = (props: Props) => {
         }),
         singleValue: (styles: any) => ({
             ...styles,
-            color: theme === 'dark' ? '#fff' : '#000',
+            color: theme.theme === 'dark' ? '#fff' : '#000',
         })
     }
 
 
     function changeTheme() {
-        setTheme(theme === 'light' ? 'dark' : 'light')
+        theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT )
     }
 
-    useEffect(() => {
-        const root = document.querySelector(':root') as HTMLElement
-
-        const components = [
-            'body-background',
-            'components-background',
-            'card-background',
-            'card-shadow',
-            'text-color'
-        ]
-
-        // console.log(root)
-        components.forEach((component) => {
-            root.style.setProperty(
-                `--${component}-default`,
-                `var(--${component}-${theme})`
-            )
-        })
-
-        console.log(theme)
-
-    }, [theme])
 
 
     return (
