@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/dinosaurs/static/css/main.ad7b3e9a.chunk.css",
+    "main.js": "/dinosaurs/static/js/main.4002b3bd.chunk.js",
+    "main.js.map": "/dinosaurs/static/js/main.4002b3bd.chunk.js.map",
+    "runtime-main.js": "/dinosaurs/static/js/runtime-main.75d1e448.js",
+    "runtime-main.js.map": "/dinosaurs/static/js/runtime-main.75d1e448.js.map",
+    "static/css/2.3c526f5d.chunk.css": "/dinosaurs/static/css/2.3c526f5d.chunk.css",
+    "static/js/2.f3e4b17e.chunk.js": "/dinosaurs/static/js/2.f3e4b17e.chunk.js",
+    "static/js/2.f3e4b17e.chunk.js.map": "/dinosaurs/static/js/2.f3e4b17e.chunk.js.map",
+    "index.html": "/dinosaurs/index.html",
+    "static/css/2.3c526f5d.chunk.css.map": "/dinosaurs/static/css/2.3c526f5d.chunk.css.map",
+    "static/css/main.ad7b3e9a.chunk.css.map": "/dinosaurs/static/css/main.ad7b3e9a.chunk.css.map",
+    "static/js/2.f3e4b17e.chunk.js.LICENSE.txt": "/dinosaurs/static/js/2.f3e4b17e.chunk.js.LICENSE.txt",
+    "static/media/cloud.93ea380a.png": "/dinosaurs/static/media/cloud.93ea380a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.75d1e448.js",
+    "static/css/2.3c526f5d.chunk.css",
+    "static/js/2.f3e4b17e.chunk.js",
+    "static/css/main.ad7b3e9a.chunk.css",
+    "static/js/main.4002b3bd.chunk.js"
+  ]
+}
